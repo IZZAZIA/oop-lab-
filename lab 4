@@ -1,0 +1,67 @@
+code 1:
+import java.util.Scanner;
+
+public class Laptop1 {
+ String brand;
+    Laptop1(String brand) {
+        this.brand = brand;
+    }
+    void displayBrand() {
+        System.out.println("Laptop Brand: " +brand);
+    }
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+      System.out.println("Enter the laptop's brand: ");
+      String b = scanner.nextLine();
+      Laptop1 myLaptop = new Laptop1(b);
+      myLaptop.displayBrand();
+    }
+    
+}
+code 2:
+package zia;
+public class ZIA {
+int rows;
+int cols;
+   
+    public static void main(String[] args) {
+      int rows = 7;
+        int cols = 5;
+
+        for (int i = 0; i < rows; i++) {
+         
+            for (int j = 0; j < cols; j++) {
+                if (i == 0 || i == rows - 1 || i + j == rows - 1) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.print("   ");
+
+        
+            for (int j = 0; j < cols; j++) {
+                if (i == 0 || i == rows - 1 || j == cols / 2) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.print("   "); // Space between letters
+
+            for (int j = 0; j < cols; j++) {
+                if (i == 0 || i == rows / 2 || j == 0 || j == cols - 1) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+
+         
+            System.out.println();
+        }
+    }
+}
